@@ -5,7 +5,6 @@
  */
 import { css } from "@linaria/core";
 import { Text, View } from "@tarojs/components";
-import { FC } from "react";
 
 const style = css`
   width: 100%;
@@ -24,6 +23,10 @@ const style = css`
     }
   }
 `;
-export const Empty: FC = () => {
-  return <View className={style}>12345</View>;
+export default () => {
+  return (
+    <View className={style}>
+      12345
+    </View>
+  );
 };
