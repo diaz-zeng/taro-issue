@@ -1,24 +1,49 @@
+import Store from "src/store";
+import { funcA } from "src/utils";
 import { css } from "@linaria/core";
 import { View, Text } from "@tarojs/components";
 import { AtButton } from "taro-ui";
-
+import { Observer, observer } from "mobx-react";
+import {Empty} from "src/components/empty";
 import "taro-ui/dist/style/components/button.scss"; // 按需引入
 import "./index.scss";
 
 const styles = css`
   background: red;
 `;
-export default () => (
-  <View className={styles}>
-    <Text>Hello world!</Text>
-    <AtButton type='primary'>I need Taro UI</AtButton>
-    <Text>Taro UI 支持 Vue 了吗？</Text>
-    <AtButton type='primary' circle>
-      支持
-    </AtButton>
-    <Text>共建？</Text>
-    <AtButton type='secondary' circle>
-      来
-    </AtButton>
-  </View>
-);
+export default () => {
+  funcA();
+  return (
+    <Observer>
+      {() => (
+        <View className={styles}>
+          <Empty></Empty>
+          <Text>Hello world!</Text>
+          <Text>{Store.count}</Text>
+          <AtButton type='primary' onClick={Store.add} circle>
+            ++
+          </AtButton>
+          <AtButton type='secondary' onClick={Store.minus} circle>
+            --
+          </AtButton>
+        </View>
+      )}
+    </Observer>
+  );
+};
+// export default observer(() => {
+//   funcA();
+//   return (
+//     <View className={styles}>
+//       <Empty></Empty>
+//       <Text>Hello world!</Text>
+//       <Text>{Store.count}</Text>
+//       <AtButton type="primary" onClick={Store.add} circle>
+//         ++
+//       </AtButton>
+//       <AtButton type="secondary" onClick={Store.minus} circle>
+//         --
+//       </AtButton>
+//     </View>
+//   );
+// });

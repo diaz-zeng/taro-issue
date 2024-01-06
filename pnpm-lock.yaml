@@ -31,12 +31,16 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.20.0
   '@typescript-eslint/parser': ^5.20.0
   babel-preset-taro: 3.6.22
+  dayjs: ^1.11.5
   eslint: ^8.12.0
   eslint-config-taro: 3.6.22
   eslint-plugin-import: ^2.12.0
   eslint-plugin-react: ^7.8.2
   eslint-plugin-react-hooks: ^4.2.0
   lodash: 4.17.15
+  mobx: ^5.15.7
+  mobx-react: ^6.1.4
+  mobx-react-lite: ^2.2.2
   postcss: ^8.4.18
   react: ^18.0.0
   react-dom: ^18.0.0
@@ -65,7 +69,11 @@ dependencies:
   '@tarojs/runtime': 3.6.22
   '@tarojs/shared': 3.6.22
   '@tarojs/taro': 3.6.22_7kv64nw3stz3m3xhzmsvoildwi
+  dayjs: 1.11.10
   lodash: 4.17.15
+  mobx: 5.15.7
+  mobx-react: 6.3.1_hhrvzjuciomdppy7ff6vnabs2a
+  mobx-react-lite: 2.2.2_hhrvzjuciomdppy7ff6vnabs2a
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   taro-ui: 3.2.2_mp473dgtumukxsurnhmu2xrx44
@@ -9694,6 +9702,42 @@ packages:
 
   /mobile-detect/1.4.5:
     resolution: {integrity: sha512-yc0LhH6tItlvfLBugVUEtgawwFU2sIe+cSdmRJJCTMZ5GEJyLxNyC/NIOAOGk67Fa8GNpOttO3Xz/1bHpXFD/g==}
+
+  /mobx-react-lite/2.2.2_hhrvzjuciomdppy7ff6vnabs2a:
+    resolution: {integrity: sha512-2SlXALHIkyUPDsV4VTKVR9DW7K3Ksh1aaIv3NrNJygTbhXe2A9GrcKHZ2ovIiOp/BXilOcTYemfHHZubP431dg==}
+    peerDependencies:
+      mobx: ^4.0.0 || ^5.0.0
+      react: ^16.8.0
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      mobx: 5.15.7
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /mobx-react/6.3.1_hhrvzjuciomdppy7ff6vnabs2a:
+    resolution: {integrity: sha512-IOxdJGnRSNSJrL2uGpWO5w9JH5q5HoxEqwOF4gye1gmZYdjoYkkMzSGMDnRCUpN/BNzZcFoMdHXrjvkwO7KgaQ==}
+    peerDependencies:
+      mobx: ^5.15.4 || ^4.15.4
+      react: ^16.8.0 || 16.9.0-alpha.0
+    dependencies:
+      mobx: 5.15.7
+      mobx-react-lite: 2.2.2_hhrvzjuciomdppy7ff6vnabs2a
+      react: 18.2.0
+    transitivePeerDependencies:
+      - react-dom
+      - react-native
+    dev: false
+
+  /mobx/5.15.7:
+    resolution: {integrity: sha512-wyM3FghTkhmC+hQjyPGGFdpehrcX1KOXsDuERhfK2YbJemkUhEB+6wzEN639T21onxlfYBmriA1PFnvxTUhcKw==}
+    dev: false
 
   /ms/2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}

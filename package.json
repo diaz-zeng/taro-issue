@@ -36,6 +36,11 @@
   ],
   "author": "",
   "dependencies": {
+    "dayjs": "^1.11.5",
+    "mobx": "^5.15.7",
+    "mobx-react": "^6.1.4",
+    "mobx-react-lite": "^2.2.2",
+
     "@babel/runtime": "^7.7.7",
     "@tarojs/components": "3.6.22",
     "@tarojs/helper": "3.6.22",
